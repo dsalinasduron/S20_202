@@ -1,0 +1,30 @@
+#top {
+	font-size: 250% ;
+	display : block ;
+	margin-left : auto ;
+	margin-right : auto ;
+	margin-bottom : 20px ;
+	text-align : center ;
+}
+body {
+	counter-reset : row ;
+}
+table {
+	border-collapse : collapse ;
+}
+th {
+	background : lightgray ;
+	font-weight : normal ;
+	text-align : left ;
+}
+tr:hover {
+	border-color : black ;
+}
+tr {
+	border-bottom-style: solid;
+	border-color : white ;
+}
+td {
+	padding : 3px ;
+	vertical-align  : top ;
+}

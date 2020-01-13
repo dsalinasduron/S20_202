@@ -1,0 +1,15 @@
+body {
+	font-size : 150% ;
+	font-family : Tahoma, Geneva, sans-serif ;
+}
+table {
+	font-size : 100% ;
+}
+.section::before {
+	content : "\00A7" " " 
+}
+.section {
+	display : block ;
+	text-align : center ;
+	font-size : 125% ;
+}
