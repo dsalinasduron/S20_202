@@ -5,11 +5,15 @@ body {
 table {
 	font-size : 100% ;
 }
-.section::before {
-	content : "\00A7" " " 
-}
 .section {
 	display : block ;
 	text-align : center ;
 	font-size : 125% ;
+	background : DarkSalmon ;
+	margin-top : 20px ;
+}
+.subsection {
+	display : block ;
+	font-weight : bold ;
+	margin-top : 10px ;
 }

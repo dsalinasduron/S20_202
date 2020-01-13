@@ -10,12 +10,14 @@ body {
 	counter-reset : row ;
 }
 table {
+	margin-top : 20px ;
 	border-collapse : collapse ;
+	width : 100% ;
 }
 th {
-	background : lightgray ;
 	font-weight : normal ;
 	text-align : left ;
+	text-decoration : underline ;
 }
 tr:hover {
 	border-color : black ;
