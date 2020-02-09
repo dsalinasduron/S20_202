@@ -2,4 +2,6 @@
 hidden/*
 handouts/*/solution/*
 labs/*/solution/*
+homework/*/sol*/*
+homework/hw3/bridges/*
 *.md
