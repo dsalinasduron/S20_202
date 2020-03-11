@@ -117,7 +117,7 @@ public class Queens {
    * @param column - The column the Queen is being placed
    * @return True if queen is under attack, false otherwise.
    */
-  private boolean isUnderAttack(int row, int column) {
+  public boolean isUnderAttack(int row, int column) {
 	  
 	  // first check left diagonal
 	  boolean rv = false;

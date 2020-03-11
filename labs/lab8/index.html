@@ -509,7 +509,15 @@ pre[class*="language-"] {
 <li><p><code>placeQueens(int row)</code></p></li>
 </ul>
 
-<p>The <code>isUnderAttack(int row, int column)</code> method determines if a Queen that is placed at <code>[row][column]</code> is under attack by another Queen on the board. This method will need to check for being under attack by column, diagonally left, and diagonally right. As you are placing Queens row-by-row, you only need to check for the rows above where a Queen has already been placed.  Some of this method has already been defined for you, and it should be clear where you need to extend the logic.</p>
+<p>The <code>isUnderAttack(int row, int column)</code> method determines if a
+Queen that is placed at <code>[row][column]</code> is under attack by another
+Queen on the board. This method will need to check for being under attack by
+column, diagonally left, and diagonally right. As you are placing Queens
+row-by-row, you only need to check for the rows above where a Queen has already
+been placed.  Some of this method has already been defined for you, and it
+should be clear where you need to extend the logic. Use <a
+href="QueensTest.java">QueensTest.java</a> to test it. You will have to
+implement clearBoard before you can use this test.</p>
 
 <p>The <code>placeQueens(int row)</code> method implements the recursive backtracking algorithm discussed in class, assigning a Queen to a specified row. It is initially called by the <code>solveQueens()</code> method, which places a Queen at row 0.</p>
 
