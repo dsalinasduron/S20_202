@@ -1,0 +1,11 @@
+digraph {
+	P
+	LC
+	RC
+	"LC.LC"
+	"LC.RC"
+	P -> LC
+	P -> RC
+	LC -> "LC.LC"
+	LC -> "LC.RC"
+}

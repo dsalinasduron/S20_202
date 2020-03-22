@@ -6,22 +6,51 @@
     <title>Trees</title>
   </head>
   <body>
-    <span style="font-weight: bold;">Trees</span><br>
-    <br>
-    A fundamental data structure in computer science that illustrates a
-    hierarchical relationship between data.<br>
-    <br>
     <span style="font-weight: bold;">Objectives</span><br>
     <br>
     - Provide an overview of trees and their terminology<br>
-    <br>
+    <br> 
     <br>
     - Examine applications that use trees.<br>
     <br>
+
+    <span style="font-weight: bold;">Trees</span><br>
+    <p>
+    A <b>tree</b> is a fundamental data structure in computer science that
+    illustrates a hierarchical relationship between data. A very basic tree
+    looks like this:
     <br>
-    <span style="font-weight: bold;">Overview</span><br>
+    <img src="basicTree.svg"></img> 
     <br>
-    Some terminology<br>
+
+    We say that P is the <b>parent</b> of LC and RC. LC is the <b>child</b> of
+    P. (I named it LC because it is the left child of P; what does RC
+    stand for?) All three &#8212 P, LC, and RC &#8212 are <b>nodes</b> of the
+    tree.</p>
+
+    <p>
+    Even though LC is the child of P, it can have children of its own. In the
+    following graph, LC is both a parent and a child. It is the child of P and
+    the parent of LC.LC.  <br>
+    <img src="lcParent.svg"></img> 
+    <br>
+    </p> 
+
+    <p>A node that has no parent is special, it is the <b>root</b> of
+    the tree:
+    <br>
+    <img src="rootDemo.svg"></img> 
+    <br>
+    A node that has no children is also special. It is a <b>leaf</b>.
+    <br>
+    <img src="rootLeaf.svg"></img>
+    <br>
+    </p>
+
+    <br>
+    <span style="font-weight: bold;">Vocabulary</span><br>
+    <br>
+    Below is a graph with common terms for relationships in trees.<br>
     <br>
     <div style="margin-left: 80px;"><a href="./trees.png"><img
           target="_blank" alt="" src="./trees.png"
