@@ -1,0 +1,36 @@
+digraph {
+	subgraph cluster_0 {
+		label="Tree 0"
+		A
+		subgraph "cluster_0.0" {
+			label="Tree 0.0"
+			B
+			subgraph "cluster_0.0.0" {
+				label="Tree 0.0.0"
+				"0.0.0" [label=empty style=dotted]
+			}
+			subgraph "cluster_0.0.1" {
+				label="Tree 0.0.1"
+				"0.0.1" [label=empty style=dotted]
+			}
+			B -> "0.0.0"
+			B -> "0.0.1"
+		}
+		subgraph "cluster_0.1" {
+			label="Tree 0.1"
+			C
+			subgraph "cluster_0.1.0" {
+				label="Tree 0.1.0"
+				"0.1.0" [label=empty style=dotted]
+			}
+			subgraph "cluster_0.1.1" {
+				label="Tree 0.1.1"
+				"0.1.1" [label=empty style=dotted]
+			}
+			C -> "0.1.0"
+			C -> "0.1.1"
+		}
+		A -> B
+		A -> C
+	}
+}

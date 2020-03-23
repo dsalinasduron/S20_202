@@ -471,6 +471,39 @@ pre[class*="language-"] {
 <p><link rel="stylesheet" href="http://people.westminstercollege.edu/faculty/ggagne/styles.css">
 <p id="header">CMPT 201 Lab 9 <br>Binary Trees</p></p>
 
+<h3 id="toc_1">Comprehension Assessment</h3>
+<p>Consider the following questions and submit your answers along with your
+code. You may submit pictures and/or documents.
+<ol>
+	<p>Consult <a href="../../handouts/trees/index.html#introduction">the tree
+	introduction</a> for the following questions.</p> 
+	<li>Consider the following general tree. Label as instructed. Some
+	nodes may have more than one label.
+		<ul>
+	<img src="assessmentTree.svg"></img> 
+			<li>Label the root with a "R".</li> 
+			<li>Label all the leaves with a "L".</li> 
+			<li>Label all parents with a "P".</li> 
+			<li>Label all children with a "C".</li> 
+		</ul> 
+	</li>
+	<li>Are all full binary trees also complete binary trees? Explain. </li>
+	<li>Is it possible for a tree to contain a node that is both a leaf and
+	a root? If so, draw the tree. If not, explain why.</li> 
+	<li>
+	Consult <a href="../../handouts/trees/index.html#traversals">the
+	discussion on traversals</a>  for the
+	following questions.
+	Draw a tree of your choosing with at least 5 nodes.
+	<ul>
+		<li>Write the preorder traversal of the tree.</li> 
+		<li>Write the postorder traversal of the tree.</li> 
+		<li>Write the inorder traversal of the tree.</li> 
+	</ul> 
+	</li> 
+</ol> 
+</p>
+
 <h3 id="toc_2">Objectives</h3>
 
 <p>The objectives of this lab are:</p>
@@ -484,7 +517,22 @@ pre[class*="language-"] {
 
 <p>This lab will involve creating several different binary tree structures and completing the implementation of the BinaryTree class.</p>
 
-<p>Begin by creating a Lab 9 project. Be sure to includes the Bridges <code>.jar</code> file in your project.</p>
+
+<p>
+Begin by creating a Lab 9 project. Be sure to include the Bridges
+<code>.jar</code> file in your project. To obtain the <code>jar</code> file, go
+to the Bridges home page <a
+href="https://bridgesuncc.github.io">https://bridgesuncc.github.io</a> and
+click on "Downloads" in the top left corner. Select the Java client. See the
+picture below.
+<img src="bridgesJar.png"></img> 
+</p>
+
+<p>Make sure you add the <code>jar</code> to the project libraries. To do so,
+right click on the lab 9 project, then click on "Properties", then "Libraries",
+then "Add External JARs". Select the JAR you downloaded.
+<img src="bridgesBuildPath.png" alt="Add External JARs in the project
+properties."></img></p>
 
 <p>Next, download the following Java class files</p>
 
@@ -495,8 +543,47 @@ pre[class*="language-"] {
 
 <p>and place them in your Lab 9 project.</p>
 
-<p>Also open the <a href="http://bridgesuncc.github.io/doc/java-api/current/html/index.html" target="_blank">API </a> associated with the Bridges visualization tool. In particular, notice the API (including its inheritance) of the 
-<a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_bin_tree_element.html" target="_blank">BinTreeElement </a>class.</p>
+<p>
+If you are having issues setting up the project properties, see the tutorial
+below.
+<iframe width="560px" height="320px" allowfullscreen="true" src="https://westminster.instructuremedia.com/embed/d1ebb216-1557-4887-bcbd-3366921c50a4" frameborder="0"></iframe>
+</p>
+
+<h3>Setting Up Bridges</h3> 
+<p>We will be using the Bridges API (Application Programming Interface) so you
+can see the trees you make! To set up Bridges, you need to
+<ol>
+	<li>Make an account at <a
+	href="https://bridgesuncc.github.io">https://bridgesuncc.github.io</a>.
+	Once you visit the page, click on the "Login" button at the top right
+	of the page. Then, click the "Sign up!" link on the following page. See
+	the pictures below
+	<img src="bridgesHome.png" alt="Login link is at the top right."></img> 
+	<img src="bridgesSignUp.png" alt="Sign up is below login menu."></img> 
+	</li> 
+	<li>Once you make your account, click on the "Profile" link in the top
+	right of your home page.
+	<img src="bridgesGallery.png" alt="Click on the Profile link."></img> 
+	</li> 
+	<li>Copy and paste your Username and Bridges API Key into
+	BinaryTreeExample.java. See the pictures below
+	<img src="bridgesAPIKey.png" alt="Copy your username and API from your
+	Profile page."></img> 
+	<img src="bridgesEclipse.png" alt="Paste your username and API Key
+	into the line where the bridge object is created."></img> 
+	<li>Run BinaryTreeExample.java, then visit the URL provided by the
+	print-out. <img src="bridgesURL.png"></img>.</li> 
+	</li> 
+</ol> 
+</p> 
+
+
+
+<p>If you are  having issues generating a visualization, check the tutorial
+video below.
+<iframe width="560px" height="320px" allowfullscreen="true" src="https://westminster.instructuremedia.com/embed/e860c2ca-3700-4dc0-b85d-084db8560be6" frameborder="0"></iframe>
+</p>
+
 
 <h3 id="toc_4">Part I - Create and Visualize a Binary Tree</h3>
 
@@ -504,9 +591,12 @@ pre[class*="language-"] {
 
 <p><img src="./tree.png" alt=""></p>
 
+
+
+
 <h3 id="toc_5">Part II - Complete the BinaryTree Class</h3>
 
-<p>The remainder of this lab involves completing th partially-implemented 
+<p>The remainder of this lab involves completing the partially-implemented 
 <a href="./BinaryTree.java" target="_blank">BinaryTree.java</a> class.</p>
 
 <h4 id="toc_6">Complete the printLevels() Method</h4>
@@ -514,6 +604,16 @@ pre[class*="language-"] {
 <p>Take a look through the <code>printLevels()</code> method and call this method from <code>BinaryTreeExample.java</code> - Notice how it uses a private helper method.</p>
 
 <p>Modify this method so that it sets the color of each node to yellow, and also sets the label of each node to the level it occurs on. Recall the root node is level 0, the node(s) below the root are at level 1, and so forth.</p>
+
+<p>You might find it helpful to open the <a
+href="http://bridgesuncc.github.io/doc/java-api/current/html/index.html">
+API</a> associated with the Bridges visualization tool. To complete this part
+of the lab, open the <a
+href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_bin_tree_element.html"
+target="_blank">API of the BinTreeElement </a>class and look through its
+methods, especially the functions inherited from TreeElement and Element
+classes.</p>
+
 
 <p>Test your implementation with a visualization, using a mouse over to ensure each node has its label set to its appropriate level.</p>
 
@@ -577,6 +677,7 @@ pre[class*="language-"] {
 <ul>
 <li><p><code>BinaryTree.java</code> </p></li>
 <li><p><code>BinaryTreeExample.java</code> </p></li>
+<li>Your answers to the Comprehension Assessment.</li> 
 </ul>
 
 <p>A rubric will be provided for the Canvas dropbox for this lab.</p>

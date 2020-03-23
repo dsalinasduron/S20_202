@@ -14,7 +14,7 @@
     - Examine applications that use trees.<br>
     <br>
 
-    <span style="font-weight: bold;">Trees</span><br>
+    <span style="font-weight: bold;" id="introduction">Introduction</span><br>
     <p>
     A <b>tree</b> is a fundamental data structure in computer science that
     illustrates a hierarchical relationship between data. A very basic tree
@@ -78,17 +78,21 @@
     node can have 0, 1, or<span style="font-weight: bold;"></span> 2
     children. <br>
     <br>
-    A tree of height h that has all of its leaves at level h and every
-    non-leaf node has exactly two children is known as a <span
-      style="font-weight: bold;">full binary tree</span>.<br>
+    When a tree
+    <ul>
+    <li>has height h, and</li> 
+    <li>all of its leaves are at level h, and</li>
+    <li>all nodes that have children have exactly two children, then</li>
+    </ul> 
+    it is a special kind of tree known as a <b>full</b> binary tree.
     <br>
     <div style="margin-left: 80px;"><img style="width: 350px; height:
         201px;" alt="" src="./full-binary-tree.png"><br>
     </div>
     <br>
-    A <span style="font-weight: bold;">complete binary tree</span> has
-    all possible nodes filled in, yet the bottom level is filled in from
-    left to right<br>
+    In a <b>complete binary tree</b>, all nodes that have children must have two
+    children. Also, the tree is filled from left to right, as shown below. If,
+    however, node R had two children, the below tree woud not be complete.<br>
     <br>
     <div style="margin-left: 80px;"><img style="width: 350px; height:
         270px;" alt="" src="./complete.png"><br>
@@ -104,7 +108,7 @@
     </div>
     <br>
     <br>
-    <span style="font-weight: bold;">Traversals of a Binary Tree</span><br>
+    <span style="font-weight: bold;" id="traversals">Traversals of a Binary Tree</span><br>
     <br>
     Consider the following tree<br>
     <br>
@@ -113,13 +117,51 @@
     </div>
     <br>
     <br>
-    <br>
     A <span style="font-weight: bold;">traversal</span> involves <span
-      style="font-weight: bold;">visiting</span> a node, and then
-    traversing the left and right subtrees. Traversals are distinguished
-    by the order of these operations.<br>
+      style="font-weight: bold;">visiting</span> a node exactly once. For
+      example, we may traverse the tree above by visiting J, F, T, C, H, W, A,
+      D, V, and Z in that order. There are many different possible traversals.
+      Can you think of another one?
+
+	<p>Although we may define a traversal by listing the nodes in order, as
+	we did above, we may also define traversals algorithmically. To
+	do this, we must first define a tree in a recursive way. A recursive
+	definition defines an object in terms of itself. We will define big
+	trees in terms of smaller trees.</p>
+
+	<p> A <b>binary tree</b> is either
+	<ul>
+		<li>a root that has two <b>binary trees</b>  as children, or</li> 
+		<li>empty</li> 
+	</ul> 
+	All binary trees can be defined this way.
+	For example, the following tree: 
+	<br>
+	<img src="nonRecursive.svg"></img> 
+	<br>
+	can be defined as a collection of seven little recursive trees, as
+	shown below:
+	<br>
+	<img src="recursiveTree.svg"></img> 
+	<br>
+	Can we define the following tree recursively?
+	<br>
+	<img src="nonRecursive1.svg"></img> 
+	<br>
+	Yes. It can be broken down into five little recursive trees.
+	<br>
+	<img src="rec2.svg"></img> 
+	<br>
+	</p>
+
+   	<p>
+<iframe width="560px" height="320px" allowfullscreen="true" src="https://westminster.instructuremedia.com/embed/18c12b92-61dd-4158-b027-6a2524a20eab" frameborder="0"></iframe>
+	</p> 
+	
     <br>
     <span style="font-weight: bold;">Pre-Order Traversal</span><br>
+    Instead of providing the order of the nodes,  we will traverse the
+    following tree by providing an algorithm :
     <br>
     <div style="margin-left: 40px;">1. Visit the root<br>
       <br>
@@ -128,13 +170,24 @@
       3. Traverse right subtree<br>
     </div>
     <br>
-    Note this is a recursive algorithm. If we consider visiting a node
-    simply outputting the value of the node, the pre-order traversal
-    outputs the following nodes<br>
+    Note that this is a recursive algorithm. The pre-order traversal
+    visits the nodes in the following order:<br>
     <br>
     <div style="margin-left: 40px;"><big><big><span style="font-weight:
             bold;">J, F, C, A, D, H, T, W, V, Z</span></big></big><br>
     </div>
+    <div style="margin-left: 80px;"><img style="width: 500px; height:
+        366px;" alt="" src="./traversals.png"><br></div>
+    <br>
+   	<p>
+<iframe width="560px" height="320px" allowfullscreen="true" src="https://westminster.instructuremedia.com/embed/18c12b92-61dd-4158-b027-6a2524a20eab" frameborder="0"></iframe>
+	</p> 
+ 
+
+<p>
+<iframe width="560px" height="320px" allowfullscreen="true" src="https://westminster.instructuremedia.com/embed/a218369b-f23c-407a-9d89-73c5f76f614a" frameborder="0"></iframe>
+</p> 
+
     <br>
     <span style="font-weight: bold;">In-Order Traversal</span><br>
     <br>
@@ -166,36 +219,6 @@
     </div>
     <br>
     <br>
-    <span style="font-weight: bold;">Examples of&nbsp; Trees</span><br>
-    <br>
-    We now look at some uses of&nbsp; trees<br>
-    <br>
-    <span style="font-weight: bold;">Expression Trees</span><br>
-    <br>
-    We can use binary trees to illustrate expressions<br>
-    <br>
-    <br>
-    <div style="margin-left: 80px;"><img style="width: 400px; height:
-        148px;" alt="" src="./expressions.png"><br>
-    </div>
-    <br>
-    <br>
-    <br>
-    Recall <a target="_blank" href="../stacks/index.html">infix and
-      postfix expressions</a>?<br>
-    <br>
-    <span style="font-weight: bold;">Decision Trees</span><br>
-    <br>
-    Decision trees are widely used in artificial intelligence for
-    decision-making.<br>
-    <br>
-    The following decision tree is used to answer whether a customer
-    will wait for a table at a busy restaurant.<br>
-    <br>
-    <img style="width: 836px; height: 510px;" alt=""
-      src="./decision-tree.png"><br>
-    <br>
-    <br>
     <span style="font-weight: bold;">Binary Search Trees</span><br>
     &nbsp;<br>
     A binary search tree (BST) is a special type of tree with the
@@ -204,16 +227,6 @@
     <div style="margin-left: 40px;"><img style="width: 450px; height:
         182px;" alt="" src="./bst.png"><br>
     </div>
-    <br>
-    <br>
-    The tree in the figure at the top of this document is a BST.<br>
-    <br>
-    Performance of a binary search tree can range from <big><span
-        style="font-family: monospace;">O(lg n)</span></big> to <big><span
-        style="font-family: monospace;">O(n)</span></big>.<br>
-    <br>
-    <br>
-    <br>
     <br>
     <span style="font-weight: bold;">Constructing Binary Search Trees</span><br>
     <br>
@@ -246,13 +259,40 @@
     <div style="margin-left: 40px;"><img style="width: 649px; height:
         273px;" alt="" src="./BST-Delete-P2.jpg"><br>
     </div>
+    <p>To delete the value, we will actually swap it out for a value that will
+    not distrupt the BST's structure. Then we will delete the extra copy of the
+    value that was swapped in. The illustrated algorithm is below:
+    <ol>
+
+	<li>Pick a <b>successor</b> to the node that will be deleted. The
+	successor is a node that contains the value that is closest to the
+	value of the node to be deleted. This is either then next largest
+	number or the next smallest number. Therefore, the successor is either
+	the right-most node in the left subtree (next smallest) or the leftmost
+	node in the right subtree (next largest). In the figure below, the next
+	smallest is 30 and the next largest is 55. Either one could be the
+	successor.
+	<br>
+	<img src="delete0.svg"></img> 
+ 	</li> 
+
+	<li>Copy the value of the successor into the node whose value will be
+	deleted. This remnoves the desired value from the tree, but leaves an
+	extra copy of the successor. In the following figure, we chose 30 as
+	the successor. We could have chosen 55 as well.
+
     <br>
+    <img src="delete1.svg"></img> 
     <br>
-    <a target="_blank" href="./TreeExercise.pdf">In-Class Exercise</a><br>
-    <br>
-    [ Only click on the following link once you have completed the in
-    class exercise. &lt;<a target="_blank" href="./TreeExercise-sol.pdf">
-      Solutions</a> &gt; ]<br>
-    <br>
+	</li>
+
+	<li>Delete the successor node since it contains the extra copy.
+	<br>
+	<img src="delete2.svg"></img> 
+	</li> 
+    </ol>
+    </p> 
+    </p> 
+
   </body>
 </html>

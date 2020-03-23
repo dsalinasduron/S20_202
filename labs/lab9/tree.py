@@ -1,0 +1,12 @@
+import graphviz as g
+t = g.Digraph(format="svg")
+t.node("A")
+t.node("B")
+t.node("C")
+t.node("D")
+t.node("E")
+t.edge("A","B")
+t.edge("A","C")
+t.edge("A","D")
+t.edge("C","E")
+t.render("assessmentTree")
